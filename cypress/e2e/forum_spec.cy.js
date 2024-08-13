@@ -138,3 +138,6 @@ describe('Forum Feature Tests', () => {
       cy.contains('.forum-posts-container', 'Edited Test Post Title', { timeout: 10000 }).should('not.exist');
     });
   });
+
+
+

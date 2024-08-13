@@ -33,47 +33,7 @@ describe('Filter Functionality Tests', () => {
     cy.get('input[type="range"][min="0"][max="2000"]').should('be.visible');
     cy.get('input[type="range"][min="0"][max="5"]').should('be.visible');
   });
-
-  // it('Should display Cancel Filter button after applying filters', () => {
-  //   // Go to the filter page
-  //   cy.get('.filter-button.profile').click();
-  //   cy.url().should('include', '/filter');
-    
-  //   // Apply filters (assuming that you have some predefined filter options to select)
-  //   cy.get('button').contains('Residence').click();
-  //   cy.get('button').contains('Single').click();
-  //   cy.get('.apply-filter-button').click();
-
-  //   // Ensure you are redirected back to the home page
-  //   cy.url().should('include', '/home');
-    
-  //   // Check if the Cancel Filter button is visible
-  //   cy.get('.cancel-filter-button.profile').should('be.visible');
-  // });
-
-  // it('Should apply filters and show correct results', () => {
-  //   const propertyTypeFilter = 'Residence';
-  //   const roomTypeFilter = 'Single';
-  
-  //   // Apply filters on the filter page
-  //   cy.get('button').contains(propertyTypeFilter).click();
-  //   cy.get('button').contains(roomTypeFilter).click();
-  //   cy.get('.apply-filter-button').click();
-
-  //   // Ensure the home page loads again with the filtered results
-  //   // cy.url().should('include', '/home');
-
-  //   // Verify that filtered hostels are displayed
-  //   cy.get('.hostel-list-section').should('exist');
-  //   cy.get('.hostel-list-section').find('.card').should('have.length.greaterThan', 0);
-
-  //   // Check each displayed hostel against the applied filters
-  //   cy.get('.hostel-list-section').find('.card').each(($el) => {
-  //     cy.wrap($el).find('.address span').invoke('text').should('include', propertyTypeFilter);
-  //     cy.wrap($el).find('.address span').invoke('text').should('include', roomTypeFilter);
-  //   });
-  // });
-  
+ 
 
   it('Should handle no results found', () => {
     // Apply filters that yield no results

@@ -82,7 +82,7 @@
   }
   
   .save-button-container.saved img {
-    filter: brightness(0) invert(1); /* White icon on purple background */
+    filter: brightness(0) invert(1); 
   }
   
   .save-button-container span {

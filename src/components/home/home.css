@@ -1,7 +1,7 @@
 .home-page {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Make the home page full height */
+  height: 100vh;
 }
 
 .header {
@@ -17,9 +17,9 @@
   justify-content: flex-start;
   margin-bottom: 20px;
   gap: 10px;
-  width: 100%; /* Set the width to 100% */
-  max-width: 2000px; /* Limit the maximum width for better responsiveness */
-  margin: 0 auto; /* Center align horizontally */
+  width: 100%; 
+  max-width: 2000px;
+  margin: 0 auto; 
 }
 
 .filter-button {
@@ -35,7 +35,6 @@
 }
 
 .filter-button:hover {
-  /* background: linear-gradient(to bottom, #917afd, #6246ea); */
   transform: scale(1.2);
   color: white;
 }
@@ -68,14 +67,14 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex: 1; /* Make main content take remaining space */
-  overflow: hidden; /* Prevent main content from overflowing */
+  flex: 1; 
+  overflow: hidden; 
 }
 
 .hostel-list-section {
   flex: 1;
-  overflow-y: auto; /* Enable vertical scrolling */
-  margin-left: 20px; /* Add margin to the left of the card components */
+  overflow-y: auto; 
+  margin-left: 20px; 
 }
 
 .hostel-list {
@@ -98,8 +97,8 @@
 .home-map-container {
   margin-top: 20px;
   width: 100%;
-  height: 100%; /* Increase the height of the map component */
-  position: relative; /* Keep map position static */
+  height: 100%; 
+  position: relative; 
 }
 
 .map-image {
@@ -141,7 +140,7 @@
   background-color: #fff;
   cursor: pointer;
   border-radius: 5px;
-  transition: transform 0.3s ease; /* Added transition for enlargement effect */
+  transition: transform 0.3s ease; 
 }
 
 .sort-button.selected {
@@ -150,6 +149,6 @@
 }
 
 .sort-button:hover {
-  transform: scale(1.1); /* Enlarges the button on hover */
+  transform: scale(1.1); 
 }
 

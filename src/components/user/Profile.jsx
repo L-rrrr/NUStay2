@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../contexts/authContext";
-import { uploadPhoto, updateUsername } from "../../firebase/auth"; // Import the necessary functions
+import { uploadPhoto, updateUsername } from "../../firebase/auth"; 
 import "./profile.css";
 
 export default function Profile() {
@@ -55,7 +55,7 @@ export default function Profile() {
         placeholder="Update your username here"
         disabled={usernameLoading}
         className="username-input"
-        maxLength={10} // Limit the input length to 10 characters
+        maxLength={10} 
       />
       <button 
         className={usernameLoading ? 'disabled' : ''} 

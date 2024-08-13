@@ -6,7 +6,7 @@
 
   h2 {
     margin-bottom: 50px;
-    font-size: 30px; /* Increased font size */
+    font-size: 30px; 
   }
 
   .filter-container {
@@ -25,7 +25,7 @@
 
       .filter-item {
         flex: 1;
-        margin-right: 20px; /* Adjusted margin to separate columns */
+        margin-right: 20px;
 
         &:last-child {
           margin-right: 0;
@@ -34,32 +34,32 @@
         label {
           display: block;
           margin-bottom: 5px;
-          font-size: 23px; /* Increased font size */
+          font-size: 23px; 
         }
 
         .button-group {
           display: flex;
-          flex-wrap: nowrap; /* Ensure all buttons are on the same row */
+          flex-wrap: nowrap; 
 
           .filter-button {
             padding: 15px;
             margin-right: 10px;
-            border: 1px solid #ccc; /* Grey border */
+            border: 1px solid #ccc; 
             background-color: white;
             color: black;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-            font-size: 20px; /* Increased font size */
-            border-radius: 20px; /* Rounded corners */
+            font-size: 20px; 
+            border-radius: 20px; 
 
             &:hover {
-              background-color: #f0f0f0; /* Light grey on hover */
+              background-color: #f0f0f0;
             }
 
             &.selected {
               background: linear-gradient(to bottom, #917afd, #6246ea);
               color: white;
-              border-color: #ccc; /* Grey border for selected state */
+              border-color: #ccc; 
             }
           }
         }
@@ -68,7 +68,7 @@
           width: 100%;
           padding: 8px;
           box-sizing: border-box;
-          font-size: 20px; /* Increased font size */
+          font-size: 20px; 
         }
       }
     }
@@ -77,29 +77,29 @@
       label {
         display: block;
         margin-bottom: 5px;
-        font-size: 23px; /* Same font size for Min Price and Min Rating */
+        font-size: 23px; 
       }
 
       input {
         width: 100%;
         padding: 8px;
         box-sizing: border-box;
-        font-size: 20px; /* Same size for sliders */
+        font-size: 20px; 
       }
     }
 
     .apply-filter-button,
     .reset-button {
       padding: 12px 24px;
-      background-color: #6b46c1; /* Purple background */
+      background-color: #6b46c1; 
       color: white;
       border: none;
       cursor: pointer;
-      font-size: 20px; /* Font size for consistency */
-      border-radius: 8px; /* Consistent border-radius */
+      font-size: 20px; 
+      border-radius: 8px; 
       transition: transform 0.3s ease;
-      border: 1px solid #ccc; /* Grey border */
-      margin-top: 10px; /* Adjust margin */
+      border: 1px solid #ccc; 
+      margin-top: 10px; 
     }
 
     .apply-filter-button:hover,

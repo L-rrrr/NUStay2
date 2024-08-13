@@ -55,7 +55,7 @@ const Register = () => {
 
     const backgroundStyle = {
         height: '100vh', // Full viewport height
-        backgroundImage: 'url("/utown.jpg")', // Path to your image in the public folder
+        backgroundImage: 'url("/utown.jpg")', 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'flex',

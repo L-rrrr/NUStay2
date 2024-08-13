@@ -118,13 +118,13 @@
 }
 
 .save-button.saved {
-  background-color: #6b46c1; /* Purple background color */
+  background-color: #6b46c1; 
   border-color: #6b46c1;
   color: white;
 }
 
 .save-button.saved img {
-  filter: brightness(0) invert(1); /* White icon on purple background */
+  filter: brightness(0) invert(1); 
 }
 
 .save-button:hover {

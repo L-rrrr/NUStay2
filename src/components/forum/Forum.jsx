@@ -4,7 +4,7 @@ import { db } from "../../firebase/firebase";
 import { collection, query, onSnapshot, orderBy } from "firebase/firestore";
 import { useAuth } from '../../contexts/authContext';
 import Post from './Post';
-import './Forum.css'; // Import the new CSS file
+import './Forum.css';
 
 const Forum = () => {
     const { currentUser } = useAuth();

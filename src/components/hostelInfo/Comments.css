@@ -41,7 +41,7 @@
   #edit-comment-button:hover {
     transform: scale(1.1);
     background-color: #5a39a7;
-    color: white; /* Ensure text color stays white */
+    color: white; 
   }
   
   #comment-container {

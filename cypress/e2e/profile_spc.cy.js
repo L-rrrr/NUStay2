@@ -55,4 +55,3 @@ describe('Profile Page Tests', () => {
       cy.get('.avatar').should('have.attr', 'src').and('include', 'firebase');
     });
   });
-  

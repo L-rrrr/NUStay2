@@ -32,7 +32,7 @@
 
 .create-post-button:hover {
     transform: scale(1.1);
-    background-color: #5a39a7; /* Slightly darker shade of purple */
+    background-color: #5a39a7; 
 }
 
 .forum-posts-container {

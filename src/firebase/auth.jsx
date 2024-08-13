@@ -1,4 +1,4 @@
-import { auth, storage, db } from "./firebase"; // make sure to import db here
+import { auth, storage, db } from "./firebase"; 
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -10,7 +10,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { writeBatch, doc, getDocs, collection, collectionGroup, query, where } from "firebase/firestore"; // import necessary Firestore functions
+import { writeBatch, doc, getDocs, collection, collectionGroup, query, where } from "firebase/firestore"; 
 
 export const doCreateUserWithEmailAndPassword = async (email, password) => {
   return createUserWithEmailAndPassword(auth, email, password);

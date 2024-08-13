@@ -7,17 +7,11 @@
 .about-header {
   text-align: center;
   margin-bottom: 40px;
-
-  /*
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-  */
 }
 
 .about-header h1 {
-  font-size: 48px; /* Increase font size for the main title */
-  font-weight: bold; /* Make the main title bold */
+  font-size: 48px; 
+  font-weight: bold; 
 }
 
 .about-content {
@@ -30,8 +24,8 @@
   flex: 1;
   margin-right: 20px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5); /* White background with 50% transparency */
-  border-radius: 10px; /* Optional: Rounded corners */
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 10px; 
 }
 
 .about-section:last-child {
@@ -40,11 +34,11 @@
 
 .about-section h2 {
   margin-bottom: 10px;
-  font-size: 28px; /* Increase font size for section titles */
+  font-size: 28px; 
 }
 
 .about-section p {
-  font-size: 18px; /* Increase font size for text */
+  font-size: 18px; 
   line-height: 1.6;
 }
 

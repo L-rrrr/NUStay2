@@ -17,7 +17,7 @@ db.once('open', async () => {
   console.log('MongoDB connected...');
 
   const hostelsData = [
-/*      {
+      {
       name: 'UTown Residence',
       description: 'UTown Residence, also known as UTR, is located in the heart of NUS University Town. It is the first of its kind in Singapore’s higher learning landscape where both undergraduate and graduate students live and learn in close proximity. The design of the residence emphasises open common areas, and the architecture fosters a sense of community and cross-disciplinary discussion. UTR oversees the large Town Green, which is a big green space for students to gather, play sports or even have a picnic. UTR consists of the North and South Tower, which can house up to 1,700 residents.',
       price: 636,
@@ -33,8 +33,8 @@ db.once('open', async () => {
       latitude: 1.3052,
       longitude: 103.7739,
       savedBy: [] // Initialize with an empty array
-    }, */
-/*     {
+    }, 
+      {
       name: 'PGP Residence',
       description: 'Nestled in a valley near the Kent Ridge MRT station, the PGP Residence (PGPR) beckons to all students who wish to live in a condominium-like hostel with air-conditioned rooms, lounges, study rooms, music rooms as well as sports facilities such as badminton, basketball, tennis courts and a gym. This is not all that PGPR can offer you. Here are some of the other things you can look forward including a diverse multicultural community with residents hailing from 68 countries to strong pastoral care from the residential staff and student leaders.',
       price: 688,
@@ -50,9 +50,9 @@ db.once('open', async () => {
       latitude: 1.2917,
       longitude: 103.7796,
       savedBy: [] // Initialize with an empty array
-    } */
- 
-/*     {
+    },
+
+      {
         name: 'PGP Residence',
         description: 'Nestled in a valley near the Kent Ridge MRT station, the PGP Residence (PGPR) beckons to all students who wish to live in a condominium-like hostel with air-conditioned rooms, lounges, study rooms, music rooms as well as sports facilities such as badminton, basketball, tennis courts and a gym. This is not all that PGPR can offer you. Here are some of the other things you can look forward including a diverse multicultural community with residents hailing from 68 countries to strong pastoral care from the residential staff and student leaders.',
         price: 608,
@@ -68,9 +68,9 @@ db.once('open', async () => {
         latitude: 1.2917,
         longitude: 103.7796,
         savedBy: [] // Initialize with an empty array
-      } */
+    }, 
 
-/*     {
+     {
       name: 'PGP Pioneer House',
       description: 'Pioneer House (PH), formerly known as “PGP House”, was established in 2017 as a pilot to develop a new type of housing model in NUS. Over the past few years, PH has implemented innovative programmes to provide proactive pastoral care and mentoring to the residents to develop a familial and inclusive residential community. Sense-of-belonging, micro-cultures, and significant networks are some of the approaches which the activities in PH were planned and executed to encourage a balanced and vibrant on-campus living and learning experience for the residents. Our signature Peer Mentorship Programme offers freshmen an opportunity to receive academic guidance and student life-related care from a select group of accomplished seniors known as "Peer Mentors". Resident Fellows and Resident Assistants are also readily available to provide pastoral care and support to all residents. At Pioneer House, every life matters and we welcome you to join our PHamily!',
       price: 688,
@@ -88,9 +88,9 @@ db.once('open', async () => {
       latitude: 1.2917,
       longitude: 103.7796,
       savedBy: [] // Initialize with an empty array
-    }  */
+    },
 
-/*     {
+    {
       name: 'PGP Pioneer House',
       description: 'Pioneer House (PH), formerly known as “PGP House”, was established in 2017 as a pilot to develop a new type of housing model in NUS. Over the past few years, PH has implemented innovative programmes to provide proactive pastoral care and mentoring to the residents to develop a familial and inclusive residential community. Sense-of-belonging, micro-cultures, and significant networks are some of the approaches which the activities in PH were planned and executed to encourage a balanced and vibrant on-campus living and learning experience for the residents. Our signature Peer Mentorship Programme offers freshmen an opportunity to receive academic guidance and student life-related care from a select group of accomplished seniors known as "Peer Mentors". Resident Fellows and Resident Assistants are also readily available to provide pastoral care and support to all residents. At Pioneer House, every life matters and we welcome you to join our PHamily!',
       price: 688,
@@ -108,8 +108,9 @@ db.once('open', async () => {
       latitude: 1.2917,
       longitude: 103.7796,
       savedBy: [] // Initialize with an empty array
-    }  */
-/*     {
+    },
+
+    {
       name: 'PGP Pioneer House',
       description: 'Pioneer House (PH), formerly known as “PGP House”, was established in 2017 as a pilot to develop a new type of housing model in NUS. Over the past few years, PH has implemented innovative programmes to provide proactive pastoral care and mentoring to the residents to develop a familial and inclusive residential community. Sense-of-belonging, micro-cultures, and significant networks are some of the approaches which the activities in PH were planned and executed to encourage a balanced and vibrant on-campus living and learning experience for the residents. Our signature Peer Mentorship Programme offers freshmen an opportunity to receive academic guidance and student life-related care from a select group of accomplished seniors known as "Peer Mentors". Resident Fellows and Resident Assistants are also readily available to provide pastoral care and support to all residents. At Pioneer House, every life matters and we welcome you to join our PHamily!',
       price: 608,
@@ -127,9 +128,9 @@ db.once('open', async () => {
       latitude: 1.2917,
       longitude: 103.7796,
       savedBy: [] // Initialize with an empty array
-    }   */
+    },
 
-/*      {
+    {
       name: 'PGP Light House',
       description: 'The five panels in our logo represent the five blocks on our grounds that make up the physical space that LightHouse occupies. This physical space gains meaning when students, depicted by the "i", step into the space and commit to our shared vision of creating a community where each resident has the opportunity to embark on this journey of self-discovery. An integral part of this vision is light, represented by the colour yellow, be it living your own light or shining that light to inspire others to do the same. Balancing that light is the colour black, reminiscent of the lows in our journey and the darkness in our lives, a reality that LightHouse both acknowledges and embraces. Our hope and commitment to residents is to build a home that shines light into their lives amidst the darkness, and ultimately empower them to find their light and be a beacon to the people around them.',
       price: 688,
@@ -145,9 +146,9 @@ db.once('open', async () => {
       latitude: 1.2904,
       longitude: 103.7817,
       savedBy: [] // Initialize with an empty array
-    }    */
+    },
 
-/*     {
+    {
       name: 'PGP Helix House',
       description: 'Helix House is located in the PGP estate, on the eastern end of the Kent Ridge Campus and is within close proximity to Science Park and Kent Ridge MRT Station. With over 3000 local and international students living within the estate, Helix House embraces global community living and racial harmony. As with all of our residences, your room at Helix House comes fully furnished with beds, desks, and wardrobes that maximize living space.Each block in Helix House has its own block amenities, and they include a block lounge. All lounges are air-conditioned and well-furnished, to facilitate bonding activities. On top of that, a shared pantry and laundrette are housed within the House. There is a small fee for the usage of washing machines and dryers, payable via NETS, Flashpay and Paylah. Other shared facilities includes a Recreation room, Music, and Baking room. While Recreation room is open for all Helix House residents, Music and Baking rooms are accessible by booking or if authorised.',
       price: 688,
@@ -163,8 +164,9 @@ db.once('open', async () => {
       latitude: 1.2912,
       longitude: 103.7800,
       savedBy: [] // Initialize with an empty array
-    }   , */
-/*     {
+    },
+
+    {
       name: 'PGP Helix House',
       description: 'Helix House is located in the PGP estate, on the eastern end of the Kent Ridge Campus and is within close proximity to Science Park and Kent Ridge MRT Station. With over 3000 local and international students living within the estate, Helix House embraces global community living and racial harmony. As with all of our residences, your room at Helix House comes fully furnished with beds, desks, and wardrobes that maximize living space. Each block in Helix House has its own block amenities, and they include a block lounge. All lounges are air-conditioned and well-furnished, to facilitate bonding activities. On top of that, a shared pantry and laundrette are housed within the House. There is a small fee for the usage of washing machines and dryers, payable via NETS, Flashpay and Paylah. Other shared facilities includes a Recreation room, Music, and Baking room. While Recreation room is open for all Helix House residents, Music and Baking rooms are accessible by booking or if authorised.',
       price: 608,
@@ -180,8 +182,9 @@ db.once('open', async () => {
       latitude: 1.2912,
       longitude: 103.7800,
       savedBy: [] // Initialize with an empty array
-    }   , */
-/*     {
+    },
+
+    {
       name: 'College  of Alice & Peter Tan (CAPT)',
       description: 'Founded in 2012, the College of Alice & Peter Tan (CAPT) is a Residential College made up of undergraduate students, faculty and administrative staff at the National University of Singapore. Together with three other residential colleges, CAPT is located within University Town and within close proximity to the wide range of learning, sports and performing arts facilities.The College of Alice & Peter Tan is distinguished by its vision of helping students engage with the community within and outside of NUS, and encouraging them to apply their knowledge to address issues that are important to society. The College consciously weaves this theme of active citizenship and community engagement through its curriculum and other aspects of the student experience. The University Town College Programme (UTCP) curriculum at CAPT is designed to help students become critical thinkers, articulate communicators, and individuals who can deal with complexity and uncertainty. In addition, through various informal learning activities, students have the opportunity to acquire a greater awareness of the diverse communities around us, develop empathy, leadership and organisational skills, and cultivate an informed view of issues relevant to society. We believe that active citizenship in the context of an educational institution is fundamentally about being equipped for participation in society. Our hope is that the outcome of this living-learning programme will be the shaping of knowledge, skills and values needed to make a difference, and that ultimately our students will apply them when they graduate to work across a wide range of careers and professions.',
       price: 688,
@@ -200,8 +203,9 @@ db.once('open', async () => {
       mealPlan:'Yes - $1147.77/Semester',
       academicProgrammes:'Yes(Compulsory)',
       hostelActivities: 'Yes'
-    }   , */
-/*     {
+    },
+
+    {
       name: 'College  of Alice & Peter Tan (CAPT)',
       description: 'Founded in 2012, the College of Alice & Peter Tan (CAPT) is a Residential College made up of undergraduate students, faculty and administrative staff at the National University of Singapore. Together with three other residential colleges, CAPT is located within University Town and within close proximity to the wide range of learning, sports and performing arts facilities.The College of Alice & Peter Tan is distinguished by its vision of helping students engage with the community within and outside of NUS, and encouraging them to apply their knowledge to address issues that are important to society. The College consciously weaves this theme of active citizenship and community engagement through its curriculum and other aspects of the student experience. The University Town College Programme (UTCP) curriculum at CAPT is designed to help students become critical thinkers, articulate communicators, and individuals who can deal with complexity and uncertainty. In addition, through various informal learning activities, students have the opportunity to acquire a greater awareness of the diverse communities around us, develop empathy, leadership and organisational skills, and cultivate an informed view of issues relevant to society. We believe that active citizenship in the context of an educational institution is fundamentally about being equipped for participation in society. Our hope is that the outcome of this living-learning programme will be the shaping of knowledge, skills and values needed to make a difference, and that ultimately our students will apply them when they graduate to work across a wide range of careers and professions.',
       price: 608,
@@ -220,8 +224,9 @@ db.once('open', async () => {
       mealPlan:'Yes - $1147.77/Semester',
       academicProgrammes:'Yes(Compulsory)',
       hostelActivities: 'Yes'
-    }   , */
-     {
+    },
+
+    {
     name: 'College  of Alice & Peter Tan (CAPT)',
     description: 'Founded in 2012, the College of Alice & Peter Tan (CAPT) is a Residential College made up of undergraduate students, faculty and administrative staff at the National University of Singapore. Together with three other residential colleges, CAPT is located within University Town and within close proximity to the wide range of learning, sports and performing arts facilities.The College of Alice & Peter Tan is distinguished by its vision of helping students engage with the community within and outside of NUS, and encouraging them to apply their knowledge to address issues that are important to society. The College consciously weaves this theme of active citizenship and community engagement through its curriculum and other aspects of the student experience. The University Town College Programme (UTCP) curriculum at CAPT is designed to help students become critical thinkers, articulate communicators, and individuals who can deal with complexity and uncertainty. In addition, through various informal learning activities, students have the opportunity to acquire a greater awareness of the diverse communities around us, develop empathy, leadership and organisational skills, and cultivate an informed view of issues relevant to society. We believe that active citizenship in the context of an educational institution is fundamentally about being equipped for participation in society. Our hope is that the outcome of this living-learning programme will be the shaping of knowledge, skills and values needed to make a difference, and that ultimately our students will apply them when they graduate to work across a wide range of careers and professions.',
     price: 736,

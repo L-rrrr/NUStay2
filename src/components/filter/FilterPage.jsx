@@ -1,5 +1,5 @@
 import React from 'react';
-import Filter from './Filter'; // Ensure the correct path is used
+import Filter from './Filter';
 import './filter.scss';
 
 const FilterPage = () => {

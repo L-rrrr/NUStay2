@@ -25,7 +25,7 @@
   
 .fields button,
 .fields label {
-    background-color: #6b46c1; /* Purple background color */
+    background-color: #6b46c1; 
     color: white;
     padding: 12px 24px;
     border: none;
@@ -63,7 +63,7 @@
   
 .fields button.disabled,
 .fields label.disabled {
-    background-color: grey; /* Disabled background color */
+    background-color: grey; 
     cursor: not-allowed;
 }
   

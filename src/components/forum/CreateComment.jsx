@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { db } from "../../firebase/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useAuth } from '../../contexts/authContext';
-//import './CreateComment.css';
 
 const CreateComment = ({ postId }) => {
   const { currentUser } = useAuth();

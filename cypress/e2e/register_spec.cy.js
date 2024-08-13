@@ -41,7 +41,7 @@ describe('Registration Tests', () => {
   
     it('Should register successfully with correct details', () => {
       cy.visit(`${baseUrl}/register`);
-      cy.get('input[type="email"]').type('newuser11@example.com', { force: true });
+      cy.get('input[type="email"]').type('newuser12@example.com', { force: true });
       cy.get('input[type="password"]').eq(0).type('password123', { force: true });
       cy.get('input[type="password"]').eq(1).type('password123', { force: true });
       cy.get('button[type="submit"]').click();

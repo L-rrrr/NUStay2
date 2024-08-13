@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const hostelsRouter = require('./routes/hostels'); // Import the hostels routes
+const hostelsRouter = require('./routes/hostels'); 
 require('dotenv').config(); // Load environment variables from .env file
 
 const app = express();

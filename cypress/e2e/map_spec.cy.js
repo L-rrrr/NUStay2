@@ -72,32 +72,32 @@ describe('Map Functionality on Homepage', () => {
     });
   });
 
-  // it('Should center the map correctly when multiple or single items are present', () => {
-  //   // Mock data for single and multiple items (adjust based on your actual data)
-  //   const singleItem = [{ latitude: 1.2966, longitude: 103.7764, _id: '1', name: 'Hostel 1', type: 'House', price: 500, averageRating: 4.5, ratings: [5] }];
-  //   const multipleItems = [
-  //     { latitude: 1.2966, longitude: 103.7764, _id: '1', name: 'Hostel 1', type: 'House', price: 500, averageRating: 4.5, ratings: [5] },
-  //     { latitude: 1.3000, longitude: 103.8000, _id: '2', name: 'Hostel 2', type: 'Apartment', price: 600, averageRating: 4.0, ratings: [4] },
-  //   ];
+  it('Should center the map correctly when multiple or single items are present', () => {
+    // Mock data for single and multiple items (adjust based on your actual data)
+    const singleItem = [{ latitude: 1.2966, longitude: 103.7764, _id: '1', name: 'Hostel 1', type: 'House', price: 500, averageRating: 4.5, ratings: [5] }];
+    const multipleItems = [
+      { latitude: 1.2966, longitude: 103.7764, _id: '1', name: 'Hostel 1', type: 'House', price: 500, averageRating: 4.5, ratings: [5] },
+      { latitude: 1.3000, longitude: 103.8000, _id: '2', name: 'Hostel 2', type: 'Apartment', price: 600, averageRating: 4.0, ratings: [4] },
+    ];
 
-  //   // Mock API response
-  //   cy.intercept('GET', '/hostels', singleItem).as('fetchSingleHostel');
-  //   cy.reload();
-  //   cy.wait('@fetchSingleHostel');
+    // Mock API response
+    cy.intercept('GET', '/hostels', singleItem).as('fetchSingleHostel');
+    cy.reload();
+    cy.wait('@fetchSingleHostel');
 
-  //   // Verify that the map centers on the single item
-  //   cy.get('.leaflet-marker-icon').should('have.length', 1);
-  //   cy.get('.leaflet-marker-icon').click();
-  //   cy.get('.leaflet-popup').should('contain.text', 'Hostel 1');
+    // Verify that the map centers on the single item
+    cy.get('.leaflet-marker-icon').should('have.length', 1);
+    cy.get('.leaflet-marker-icon').click();
+    cy.get('.leaflet-popup').should('contain.text', 'Hostel 1');
 
-  //   // Mock API response for multiple items
-  //   cy.intercept('GET', '/hostels', multipleItems).as('fetchMultipleHostels');
-  //   cy.reload();
-  //   cy.wait('@fetchMultipleHostels');
+    // Mock API response for multiple items
+    cy.intercept('GET', '/hostels', multipleItems).as('fetchMultipleHostels');
+    cy.reload();
+    cy.wait('@fetchMultipleHostels');
 
-  //   // Verify that the map centers and displays all items
-  //   cy.get('.leaflet-marker-icon').should('have.length', 2);
-  // });
+    // Verify that the map centers and displays all items
+    cy.get('.leaflet-marker-icon').should('have.length', 2);
+  });
 
 
 
@@ -106,7 +106,7 @@ describe('Map Functionality on Homepage', () => {
     // cy.get('.leaflet-marker-icon').should('have.length', 15);
 
     // Step 2: Click on the 5th marker
-    cy.get('.leaflet-marker-icon').eq(4).click(); // 0-based index
+    cy.get('.leaflet-marker-icon').eq(10).click(); // 0-based index
 
     // Step 3: Click on the first link in the popup
     cy.get('.leaflet-popup-content').find('a').first().click();

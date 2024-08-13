@@ -5,7 +5,7 @@ import { doc, getDoc, collection, query, onSnapshot, orderBy } from 'firebase/fi
 import Comment from './Comment';
 import CreateComment from './CreateComment';
 import { useAuth } from '../../contexts/authContext';
-import './Comments.css'; // Import the new CSS file
+import './Comments.css'; 
 
 const Comments = () => {
     const { postId } = useParams(); // Extract postId from the route parameters
