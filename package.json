@@ -36,10 +36,9 @@
   },
   "scripts": {
     "dev": "vite",
-    "start": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "start-backend": "node server.js",
+    "server": "nodemon --watch backend --exec node server.js",
     "seed": "node backend/seed/seedHostels.js"
   },
   "eslintConfig": {
@@ -63,6 +62,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.0",
     "cypress": "^13.13.1",
+    "nodemon": "^2.0.22",
     "sass": "^1.77.6",
     "vite": "^5.2.12"
   }
