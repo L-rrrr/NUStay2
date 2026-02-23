@@ -1,0 +1,23 @@
+{
+  "name": "nustay-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1",
+    "axios": "^1.7.2",
+    "firebase": "^10.12.2",
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "vite": "^5.2.12",
+    "@vitejs/plugin-react": "^4.3.0",
+    "sass": "^1.77.6"
+  }
+}
