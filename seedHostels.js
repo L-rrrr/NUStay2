@@ -673,7 +673,16 @@ hostelActivities: 'Yes(Compulsory)'
     await Hostel.deleteMany({}); // Clear existing data */
 
     console.log('Inserting new hostels...');
-    const result = await Hostel.insertMany(hostelsData);
+
+    // Normalize data: ensure required fields exist to satisfy the Mongoose schema
+    const normalizedHostels = hostelsData.map((h) => ({
+      ...h,
+      mealPlan: h.mealPlan || 'N/A',
+      academicProgrammes: h.academicProgrammes || 'N/A',
+      hostelActivities: h.hostelActivities || 'N/A',
+    }));
+
+    const result = await Hostel.insertMany(normalizedHostels);
     console.log('Hostels inserted:', result);
   } catch (err) {
     console.error('Error inserting hostels:', err);

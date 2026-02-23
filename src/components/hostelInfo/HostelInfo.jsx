@@ -17,13 +17,15 @@ const HostelInfo = () => {
 
   useEffect(() => {
     const fetchedHostel = hostels.find((hostel) => hostel._id === id);
+    const userId = currentUser ? currentUser.uid : null;
     if (fetchedHostel) {
       setHostel(fetchedHostel);
-      setIsSaved(fetchedHostel.savedBy.includes(currentUser.uid));
+      setIsSaved(userId ? fetchedHostel.savedBy.includes(userId) : false);
     }
-  }, [id, hostels, currentUser.uid]);
+  }, [id, hostels, currentUser]);
 
   const handleSave = async () => {
+    if (!currentUser) return;
     await saveHostel(id, currentUser.uid);
     setIsSaved((prev) => !prev);
   };
