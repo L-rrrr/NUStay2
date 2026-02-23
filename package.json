@@ -38,7 +38,9 @@
     "dev": "vite",
     "start": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "start-backend": "node server.js",
+    "seed": "node backend/seed/seedHostels.js"
   },
   "eslintConfig": {
     "extends": [
