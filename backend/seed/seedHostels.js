@@ -669,8 +669,8 @@ hostelActivities: 'Yes(Compulsory)'
   ];
 
   try {
-/*     console.log('Deleting existing hostels...');
-    await Hostel.deleteMany({}); // Clear existing data */
+    console.log('Deleting existing hostels...');
+    await Hostel.deleteMany({}); // Clear existing data so seeding is idempotent
 
     console.log('Inserting new hostels...');
     const result = await Hostel.insertMany(hostelsData);

@@ -13,8 +13,8 @@ const hostelSchema = new mongoose.Schema({
   imageUrls: { type: [String], required: true },
   averageRating: { type: Number, required: true },
   ratings: { type: [ratingSchema], required: true },
-  latitude: { type: String, required: true },
-  longitude: { type: String, required: true },
+  latitude: { type: Number, required: true },
+  longitude: { type: Number, required: true },
   savedBy: { type: [String], default: [] }, // Array of user IDs who have saved this hostel
   mealPlan: { type: String, required: false, default: 'N/A' },
   academicProgrammes: { type: String, required: false, default: 'N/A' },

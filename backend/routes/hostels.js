@@ -32,11 +32,11 @@ router.post('/', async (req, res) => {
     description: req.body.description,
     price: req.body.price,
     type: req.body.type,
-    imageUrl: req.body.imageUrl,
+    imageUrls: req.body.imageUrl,
     averageRating: req.body.averageRating,
     ratings: req.body.ratings,
     latitude: req.body.latitude,
-    longtitude: req.body.longtitude
+    longitude: req.body.longitude
   });
 
   try {
@@ -83,35 +83,31 @@ router.post('/rate-hostel/:id', async (req, res) => {
     }
   });
   
-// Delete a rating
-router.post('/delete-rating/:id', async (req, res) => {
-    const { userId } = req.body;
-  
-    if (!userId) {
-      return res.status(400).json({ message: 'UserId is required' });
+// Delete a rating (RESTful: userId in URL)
+router.delete('/:id/ratings/:userId', async (req, res) => {
+  const { id, userId } = req.params;
+
+  try {
+    const hostel = await Hostel.findById(id);
+
+    if (!hostel) {
+      return res.status(404).json({ message: 'Hostel not found' });
     }
-  
-    try {
-      const hostel = await Hostel.findById(req.params.id);
-  
-      if (!hostel) {
-        return res.status(404).json({ message: 'Hostel not found' });
-      }
-  
-      // Remove the user's rating
-      hostel.ratings = hostel.ratings.filter(r => r.userId !== userId);
-  
-      // Update average rating
-      const totalRatings = hostel.ratings.reduce((acc, curr) => acc + curr.rating, 0);
-      hostel.averageRating = hostel.ratings.length > 0 ? (totalRatings / hostel.ratings.length).toFixed(1) : 0;
-  
-      await hostel.save();
-  
-      res.json(hostel);
-    } catch (err) {
-      res.status(500).json({ message: 'Error deleting rating', error: err.message });
-    }
-  });
+
+    // Remove the user's rating
+    hostel.ratings = hostel.ratings.filter(r => r.userId !== userId);
+
+    // Update average rating
+    const totalRatings = hostel.ratings.reduce((acc, curr) => acc + curr.rating, 0);
+    hostel.averageRating = hostel.ratings.length > 0 ? +(totalRatings / hostel.ratings.length).toFixed(1) : 0;
+
+    await hostel.save();
+
+    res.json(hostel);
+  } catch (err) {
+    res.status(500).json({ message: 'Error deleting rating', error: err.message });
+  }
+});
   
 // Save a hostel
 router.post('/save/:id', async (req, res) => {

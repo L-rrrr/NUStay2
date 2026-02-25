@@ -49,9 +49,8 @@ const Rating = ({ hostelId }) => {
     try {
       console.log("Deleting rating for user:", currentUser.uid);
 
-      const response = await axios.post(`${backendUrl}/hostels/delete-rating/${hostelId}`, {
-        userId: currentUser.uid,
-      });
+      // Use DELETE with userId in the URL to match backend route
+      const response = await axios.delete(`${backendUrl}/hostels/${hostelId}/ratings/${currentUser.uid}`);
 
       console.log("Delete rating response:", response.data);
       setRating(null);
