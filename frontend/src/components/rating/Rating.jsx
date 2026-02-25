@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Stars from '../star/Stars';
-import axios from 'axios';
+import apiRequest from '../../lib/apiRequest';
 import { useAuth } from '../../contexts/authContext';
 import './Rating.css';
 
@@ -8,14 +8,12 @@ const Rating = ({ hostelId }) => {
   const { currentUser } = useAuth();
   const [rating, setRating] = useState(null);
   const [editMode, setEditMode] = useState(false);
-  const backendUrl =  import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
-  
   useEffect(() => {
     const fetchRating = async () => {
       try {
-        const response = await axios.get(`${backendUrl}/hostels/${hostelId}`);
+        const response = await apiRequest.get(`/hostels/${hostelId}`);
         const hostel = response.data;
-        const userRating = hostel.ratings?.find(r => r.userId === currentUser.uid);
+        const userRating = hostel.ratings?.find(r => r.userId === currentUser?.uid);
         if (userRating) {
           setRating(userRating.rating);
         }
@@ -31,7 +29,7 @@ const Rating = ({ hostelId }) => {
     try {
       console.log("Submitting rating:", { userId: currentUser.uid, rating: newRating });
 
-      const response = await axios.post(`${backendUrl}/hostels/rate-hostel/${hostelId}`, {
+      const response = await apiRequest.post(`/hostels/rate-hostel/${hostelId}`, {
         userId: currentUser.uid,
         rating: Number(newRating),
       });
@@ -50,7 +48,7 @@ const Rating = ({ hostelId }) => {
       console.log("Deleting rating for user:", currentUser.uid);
 
       // Use DELETE with userId in the URL to match backend route
-      const response = await axios.delete(`${backendUrl}/hostels/${hostelId}/ratings/${currentUser.uid}`);
+      const response = await apiRequest.delete(`/hostels/${hostelId}/ratings/${currentUser.uid}`);
 
       console.log("Delete rating response:", response.data);
       setRating(null);
