@@ -16,9 +16,9 @@ const hostelSchema = new mongoose.Schema({
   latitude: { type: String, required: true },
   longitude: { type: String, required: true },
   savedBy: { type: [String], default: [] }, // Array of user IDs who have saved this hostel
-  mealPlan: { type: String, required: true},
-  academicProgrammes: { type: String, required: true},
-  hostelActivities: { type: String, required: true}
+  mealPlan: { type: String, required: false, default: 'N/A' },
+  academicProgrammes: { type: String, required: false, default: 'N/A' },
+  hostelActivities: { type: String, required: false, default: 'N/A' }
 });
 
 const Hostel = mongoose.model('Hostel', hostelSchema);
