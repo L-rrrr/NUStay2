@@ -10,7 +10,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { writeBatch, doc, getDocs, collection, collectionGroup, query, where } from "firebase/firestore"; 
+import { writeBatch, getDocs, collection, collectionGroup, query, where } from "firebase/firestore"; 
 
 export const doCreateUserWithEmailAndPassword = async (email, password) => {
   return createUserWithEmailAndPassword(auth, email, password);
@@ -24,6 +24,7 @@ export const doSignInWithGoogle = async () => {
   const provider = new GoogleAuthProvider();
   const result = await signInWithPopup(auth, provider);
   const user = result.user;
+  return user;
 };
 
 export const doSignOut = () => {
@@ -55,6 +56,7 @@ export const uploadPhoto = async (file, currentUser, setLoading, setCurrentUser)
   setLoading(true);
 
   try {
+    console.log('Uploading file', file.name, 'uid', currentUser.uid, 'to', fileRef.fullPath || `profile/${currentUser.uid}/${file.name}`);
     await uploadBytes(fileRef, file);
     const photoURL = await getDownloadURL(fileRef);
     await updateProfile(auth.currentUser, { photoURL });
@@ -90,8 +92,19 @@ export const uploadPhoto = async (file, currentUser, setLoading, setCurrentUser)
 
   } catch (error) {
     setLoading(false);
-    console.error("Error uploading photo:", error);
-    alert("Failed to upload photo");
+    // Detailed logging to help diagnose network / auth / storage issues
+    try {
+      console.error("Error uploading photo:", {
+        name: error.name,
+        code: error.code,
+        message: error.message,
+        stack: error.stack,
+        customData: error.customData || null,
+      });
+    } catch (logErr) {
+      console.error('Error uploading photo (failed to serialize):', error, logErr);
+    }
+    alert("Failed to upload photo: " + (error.message || error.code || 'unknown error'));
   }
 };
 

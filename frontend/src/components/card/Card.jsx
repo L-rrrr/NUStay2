@@ -10,16 +10,20 @@ function Card({ item }) {
   const [isSaved, setIsSaved] = useState(false);
 
   useEffect(() => {
-    if (currentUser && item.savedBy.includes(currentUser.uid)) {
+    const uid = currentUser?.uid;
+    if (uid && item.savedBy.includes(uid)) {
       setIsSaved(true);
+    } else {
+      setIsSaved(false);
     }
-  }, [currentUser, item.savedBy]);
+  }, [currentUser?.uid, item.savedBy]);
 
   const handleSave = async () => {
-    if (!currentUser) return;
+    const uid = currentUser?.uid;
+    if (!uid) return; // require login to save
 
     setIsSaved((prev) => !prev);
-    await saveHostel(item._id, currentUser.uid);
+    await saveHostel(item._id, uid);
   };
 
   return (

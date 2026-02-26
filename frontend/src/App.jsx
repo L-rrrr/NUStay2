@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
 import { AuthProvider } from './contexts/authContext';
 import { HostelProvider } from './contexts/HostelContext';

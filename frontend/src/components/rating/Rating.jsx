@@ -26,6 +26,11 @@ const Rating = ({ hostelId }) => {
   }, [hostelId, currentUser]);
 
   const handleRating = async (newRating) => {
+    if (!currentUser?.uid) {
+      alert('Please log in to rate this hostel');
+      return;
+    }
+
     try {
       console.log("Submitting rating:", { userId: currentUser.uid, rating: newRating });
 
@@ -44,6 +49,11 @@ const Rating = ({ hostelId }) => {
   };
 
   const deleteRating = async () => {
+    if (!currentUser?.uid) {
+      alert('Please log in to delete your rating');
+      return;
+    }
+
     try {
       console.log("Deleting rating for user:", currentUser.uid);
 
