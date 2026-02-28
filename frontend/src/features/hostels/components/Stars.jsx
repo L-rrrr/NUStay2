@@ -1,0 +1,48 @@
+import { useState } from 'react';
+import './Stars.css';
+
+const DEFAULT_COUNT = 5;
+const DEFAULT_ICON = '★';
+const DEFAULT_UNSELECTED_COLOR = 'grey';
+const DEFAULT_COLOR = 'yellow';
+
+export default function Stars({ count, defaultRating, icon, color, iconSize, onRating }) {
+  const [rating, setRating] = useState(defaultRating);
+  const [temporaryRating, setTemporaryRating] = useState(0);
+
+  const stars = Array(count || DEFAULT_COUNT).fill(icon || DEFAULT_ICON);
+
+  const handleClick = (nextRating) => {
+    setRating(nextRating);
+    localStorage.setItem('starRating', nextRating);
+    if (onRating) {
+      onRating(nextRating);
+    }
+  };
+
+  return (
+    <div className="starsContainer">
+      {stars.map((item, index) => {
+        const isActiveColor = (rating || temporaryRating) && (index < rating || index < temporaryRating);
+        const elementColor = isActiveColor ? color || DEFAULT_COLOR : DEFAULT_UNSELECTED_COLOR;
+
+        return (
+          <div
+            className="star"
+            key={index}
+            style={{
+              fontSize: iconSize ? `${iconSize}px` : '14px',
+              color: elementColor,
+              filter: `${isActiveColor ? 'grayscale(0%)' : 'grayscale(100%)'}`,
+            }}
+            onMouseEnter={() => setTemporaryRating(index + 1)}
+            onMouseLeave={() => setTemporaryRating(0)}
+            onClick={() => handleClick(index + 1)}
+          >
+            {item}
+          </div>
+        );
+      })}
+    </div>
+  );
+}

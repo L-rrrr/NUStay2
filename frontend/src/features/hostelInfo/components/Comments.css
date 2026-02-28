@@ -1,0 +1,133 @@
+#comments-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    max-width: 100%;
+  }
+  
+  #create-comment-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  #create-comment-input,
+  #reply-input,
+  #edit-comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  #submit-comment-button,
+  #edit-comment-button {
+    padding: 12px 24px;
+    margin-top: 2%;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    background-color: #6b46c1;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  #submit-comment-button:hover,
+  #edit-comment-button:hover {
+    transform: scale(1.1);
+    background-color: #5a39a7;
+    color: white; 
+  }
+  
+  #comment-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+  }
+  
+  #comment-img-container {
+    margin-right: 10px;
+  }
+  
+  #user-comment-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .comment-actions,
+  .reply-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 5px;
+  }
+  
+  #comment-content-container {
+    flex: 1;
+  }
+  
+  #comment-content-user {
+    font-weight: bold;
+  }
+  
+  #comment-content-body {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  
+  #comment-timestamp,
+  #reply-timestamp {
+    margin-top: 5px;
+    font-size: 12px;
+    color: gray;
+  }
+  
+  #reply-input-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  #reply-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #reply-content {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #replies-container {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  #comments-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  #comments-container button:hover {
+    color: #0056b3;
+  }
+  
+  #comments-container textarea {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }

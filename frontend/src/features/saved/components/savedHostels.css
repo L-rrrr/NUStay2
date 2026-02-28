@@ -1,0 +1,25 @@
+.saved-hostels-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.saved-hostels-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 900px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.saved-hostels-page h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+  padding: 10px 0;
+}

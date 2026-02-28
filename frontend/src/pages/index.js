@@ -1,0 +1,11 @@
+export { default as LoginPage } from './LoginPage';
+export { default as RegisterPage } from './RegisterPage';
+export { default as HomePage } from './HomePage';
+export { default as HostelInfoPage } from './HostelInfoPage';
+export { default as FilterPage } from './FilterPage';
+export { default as SavedHostelsPage } from './SavedHostelsPage';
+export { default as ProfilePage } from './ProfilePage';
+export { default as ForumPage } from './ForumPage';
+export { default as CreatePostPage } from './CreatePostPage';
+export { default as ForumCommentsPage } from './ForumCommentsPage';
+export { default as AboutPage } from './AboutPage';

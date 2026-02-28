@@ -1,0 +1,11 @@
+.auth-page-background {
+  min-height: 100vh;
+  background-image: url('/utown.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
